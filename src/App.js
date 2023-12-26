@@ -27,13 +27,13 @@ const categories = [
 
 function App() {
   const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  // const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   const handleCall =  async () => {
     const fetchArticles = async () => {
       try {
-        setLoading(true);
+        // setLoading(true);
         // abc news
         // const response = await fetch('https://newsapi.org/v2/top-headlines?pageSize=21&sources=abc-news&language=en&apiKey=ff6c70e621e54ff19b943a356a78973d');
         // all business sources 
@@ -70,7 +70,7 @@ function App() {
       } catch (error) {
         setError(error);
       } finally {
-        setLoading(false);
+        // setLoading(false);
       }
     };
 

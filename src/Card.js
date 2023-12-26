@@ -1,4 +1,4 @@
-import React, {useState, useMemo} from "react";
+import React, {useState} from "react";
 
 function shuffleArray(originalArray) {
     // Creating a copy of the original array
