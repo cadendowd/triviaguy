@@ -23,14 +23,14 @@ const Card = (props) => {
         color,
     } = props;
 
-    const [loading, setLoading] = useState(false);
+    // const [loading, setLoading] = useState(false);
     const [shuffledArticles, setShuffledArticles] = useState(shuffleArray(articles));
 
     const handleShufle = () => {
-        setLoading(true);
+        // setLoading(true);
         const shuffleAgain = shuffleArray(shuffledArticles);
         setShuffledArticles(shuffleAgain);
-        setLoading(false);
+        // setLoading(false);
     }
     
     return (
