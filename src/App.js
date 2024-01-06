@@ -23,6 +23,14 @@ const categories = [
     category: "Technology",
     color: "lightgray",
   },
+  {
+    category: "World",
+    color: "lavendar",
+  },
+  {
+    category: "Nation",
+    color: "lightgray",
+  },
 ];
 
 function App() {
@@ -41,15 +49,18 @@ function App() {
 
         const apiKey = process.env.REACT_APP_NEWS_API_KEY;
         const responses = await Promise.all([
-          fetch(`https://newsapi.org/v2/top-headlines?category=general&language=en&apiKey=${apiKey}`),
-          // fetch(`https://newsapi.org/v2/top-headlines?category=entertainment&language=en&apiKey=${apiKey}`),
-          // fetch(`https://newsapi.org/v2/top-headlines?category=sports&language=en&apiKey=${apiKey}`),
-          // fetch(`https://newsapi.org/v2/top-headlines?category=business&language=en&apiKey=${apiKey}`),
-          // fetch(`https://newsapi.org/v2/top-headlines?category=technology&language=en&apiKey=${apiKey}`),
+          fetch(`https://gnews.io/api/v4/top-headlines?category=general&language=en&country=us&max=10&apikey=${apiKey}`),
+          // fetch(`https://gnews.io/api/v4/top-headlines?category=entertainment&language=en&country=us&max=10&apikey=${apiKey}`),
+          // fetch(`https://gnews.io/api/v4/top-headlines?category=sports&language=en&country=us&max=10&apikey=${apiKey}`),
+          // fetch(`https://gnews.io/api/v4/top-headlines?category=business&language=en&country=us&max=10&apikey=${apiKey}`),
+          // fetch(`https://gnews.io/api/v4/top-headlines?category=technology&language=en&country=us&max=10&apikey=${apiKey}`),
+          // fetch(`https://gnews.io/api/v4/top-headlines?category=world&language=en&country=us&max=10&apikey=${apiKey}`),
+          // fetch(`https://gnews.io/api/v4/top-headlines?category=nation&language=en&country=us&max=10&apikey=${apiKey}`),
 
-          // fetch('https://newsapi.org/v2/top-headlines/sources?country=us&language=en&apiKey=ff6c70e621e54ff19b943a356a78973d'),
+          // fetch('https://gnews.io/api/v4/top-headlines/sources?country=us&language=en&apiKey=ff6c70e621e54ff19b943a356a78973d'),
         ]);
 
+        console.log(responses);
         const data = await Promise.all(responses.map(response => response.json()));
         console.log(data);
         const zipped = data.map((article, i) => {
