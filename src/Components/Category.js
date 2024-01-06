@@ -54,7 +54,7 @@ const Category = (props) => {
 
     return (
         <Container mt={'8px'}>
-            <Button onClick={handleCall}>{title}</Button>
+            <Button onClick={data ? null : handleCall}>{title}</Button>
             {error && <Text>Something went wrong try again tomorrow</Text>}
             {
                 data && 
