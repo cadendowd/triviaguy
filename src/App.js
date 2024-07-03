@@ -1,7 +1,8 @@
-import './App.css';
-import Navbar from './Components/Navbar';
-import Category from './Components/Category';
-import { Divider } from '@chakra-ui/react';
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import Category from "./Components/Category";
+import { Divider } from "@chakra-ui/react";
+import TriviaQuestion from "./Components/TrivaQuestion";
 
 const categories = [
   {
@@ -25,20 +26,20 @@ const categories = [
 function App() {
   return (
     <div className="App">
-      <Navbar/>
-      {
-        categories.map((cat, i) => {
-          return (<>
-          <Category title={cat.title} url={cat.url}/>
-          {i !== categories.length - 1 && <Divider mt={'8px'}/>}
-          </>)
-        })
-      }
+      <Navbar />
+      <TriviaQuestion />
+      {categories.map((cat, i) => {
+        return (
+          <>
+            <Category title={cat.title} url={cat.url} />
+            {i !== categories.length - 1 && <Divider mt={"8px"} />}
+          </>
+        );
+      })}
     </div>
   );
 }
 
 export default App;
-
 
 // "message": "Your API key is invalid or incorrect. Check your key, or go to https://newsapi.org to create a free API key."
