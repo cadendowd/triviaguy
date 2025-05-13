@@ -87,3 +87,16 @@ export default function TriviaQuestion() {
     </div>
   );
 }
+
+// google image
+// 2 generated - links -> rabbit hole
+// youtube video
+
+// current events -> funny team name generator ?
+
+// music
+
+// general
+
+// input types of questions -> predictive learning to questions they would make.
+//

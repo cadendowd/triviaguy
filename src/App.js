@@ -2,7 +2,6 @@ import "./App.css";
 import Navbar from "./Components/Navbar";
 import Category from "./Components/Category";
 import { Divider } from "@chakra-ui/react";
-import TriviaQuestion from "./Components/TrivaQuestion";
 
 const categories = [
   {
@@ -27,7 +26,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <TriviaQuestion />
       {categories.map((cat, i) => {
         return (
           <>

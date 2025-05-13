@@ -20,9 +20,7 @@ const Card = (props) => {
   const { articles, category, color } = props;
 
   // const [loading, setLoading] = useState(false);
-  const [shuffledArticles, setShuffledArticles] = useState(
-    shuffleArray(articles)
-  );
+  const [shuffledArticles, setShuffledArticles] = useState(articles);
 
   const handleShufle = () => {
     // setLoading(true);
